@@ -7,16 +7,16 @@ spec:
   generators:
   - list:
       elements:
-      - env: dev
-      - env: staging
-      - env: prod
+      - env: test-dev
+      - env: test-staging
+      - env: test-prod
   template:
     metadata:
       name: "sample-app-{{env}}"
     spec:
       project: default
       source:
-        repoURL: https://github.com/yourusername/multi-env-poc.git
+        repoURL: https://github.com/BBrucelee2002/argocd-testing.git
         targetRevision: main
         path: app/overlays/{{env}}
       destination:
