@@ -7,9 +7,9 @@ spec:
   generators:
   - list:
       elements:
-      - env: test-dev
-      - env: test-staging
-      - env: test-prod
+      - env: dev
+      - env: staging
+      - env: prod
   template:
     metadata:
       name: "sample-app-{{env}}"
@@ -27,4 +27,4 @@ spec:
           prune: true
           selfHeal: true
         syncOptions:
-        - CreateNamespace=true
+        - CreateNamespace=true  # THIS IS THE CRUCIAL LINE
